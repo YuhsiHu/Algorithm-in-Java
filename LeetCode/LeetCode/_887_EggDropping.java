@@ -1,12 +1,6 @@
-package DynamicProgramming;
+package LeetCode;
 
-/**
- * Egg dropping problem
- * 
- * @author Hu Yuxi
- *
- */
-public class EggDropping {
+public class _887_EggDropping {
 	/**
 	 * m层需要多少个鸡蛋来测试
 	 * @param n
@@ -46,7 +40,7 @@ public class EggDropping {
 
 		return eggFloor[n][m];
 	}
-
+	
 	/**
 	 * n个鸡蛋最多能测多少层
 	 * @param n
@@ -83,7 +77,7 @@ public class EggDropping {
 	public static void main(String args[]) {
 		int n = 1, m = 2;
 		// result outputs min no. of trials in worst case for n eggs and m floors
-		int result1 = minTrials(n, m);
+		int result1=minTrials(n, m);
 		int result2 =minTrialsOptimized(n, m);
 		System.out.println(result1);
 		System.out.println(result2);
