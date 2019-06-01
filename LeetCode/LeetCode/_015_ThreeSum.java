@@ -23,32 +23,39 @@ public class _015_ThreeSum {
 
 		final List<List<Integer>> res = new ArrayList<>();
 
-		if (nums.length == 0)
+		int length=nums.length;
+		if (length == 0)
 			return res;
 		// sort
 		Arrays.sort(nums);
 
-		if (nums[0] <= 0 && nums[nums.length - 1] >= 0) {
-			for (int i = 0; i < nums.length - 2;) {
+		if (nums[0] <= 0 && nums[length - 1] >= 0) {
+			//最小的数小于0最大的数大于0,两端开始搜
+			for (int i = 0; i < length - 2;) {
 				if (nums[i] > 0)
 					break;
 				int l = i + 1;
-				int r = nums.length - 1;
+				int r = length - 1;
 
+				//对给定的i索引左右两端查找有没有一对让sum=0
 				do {
 					int sum = nums[i] + nums[l] + nums[r];
 					if (sum == 0) {
+						//sum=0直接添加
 						res.add(Arrays.asList(nums[i], nums[l], nums[r]));
 					}
 					if (sum >= 0) {
+						//中间i不变的情况下sum>=0说明r太大了
 						while (nums[r] == nums[--r] && r > l)
 							;
 					} else {
+						//中间i不变的情况下sum<=0说明l太小了
 						while (nums[l] == nums[++l] && r > l)
 							;
 					}
-				} while (r > l);
-				while (nums[i] == nums[++i] && i < nums.length - 2)
+				} while (l<r);
+				//如果有和i索引处重复的值就直接跳过了,不会重复添加
+				while (nums[i] == nums[++i] && i < length - 2)
 					;
 			}
 		}
