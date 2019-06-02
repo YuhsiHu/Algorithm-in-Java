@@ -6,8 +6,7 @@ Algorithm in Java
   1. This repository was originally used to store code for algorithm analysis and design class, but now I am gradually adding code for other algorithms and data structures implemented by Java.  
   2. I believe this repo is helpful for beginners of the algorithm and students who are preparing for the **campus interview**. The comments are added in detail during my development process.  
   3. I will also commit some solutions about puzzles in **[LeetCode](https://leetcode-cn.com/)**.
-  4. **Welcome everyone** to supplement this repo!
-
+  
 
 **1.Algorithms**
 -----------------------------------------  
@@ -23,3 +22,8 @@ Algorithm in Java
 **2.[LeetCode Solutions](LeetCode/LeetCode)**
 --------------------------------------------
 There are statements about question in **every** java file so you don't need to get questions from website, but there is **no main function**. I added **enough comments** to the code so that you can easily understand.
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
